@@ -13,13 +13,13 @@ Background:
 Scenario: Buy one product
     When I buy "Bread" with quantity 2
     Then total should be 41.00
-    Then The quantity of "Bread" should be 3 left
+    Then The remaining stock of "Bread" will be 3 exists
 
 Scenario: Buy multiple products
     When I buy "Bread" with quantity 2
     And I buy "Jam" with quantity 1
     And I buy "Chocolate" with quantity 5
     Then total should be 371.00
-    Then The quantity of "Bread" should be 3 left
-    Then The quantity of "Jam" should be 9 left
-    Then The quantity of "Chocolate" should be 15 left
+    Then The remaining stock of "Bread" will be 3 exists
+    Then The remaining stock of "Jam" will be 9 exists
+    Then The remaining stock of "Chocolate" will be 15 exists
